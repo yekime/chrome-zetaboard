@@ -1,0 +1,35 @@
+{
+    "name": "Zetaboard",
+    "description": "Zetamac statistics",
+    "version": "1.0",
+    "manifest_version": 3,
+    "icons": {
+        "128": "images/icon.png"
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "scripts/main.js"
+            ],
+            "matches": [
+                "https://arithmetic.zetamac.com/*"
+            ]
+        }
+    ],
+    "action": {
+        "default_icon": "images/icon.png"
+    },
+    "permissions": [
+        "webRequest",
+        "tabs",
+        "storage"
+    ],
+    "background": {
+        "service_worker": "scripts/worker.js",
+        "type": "module"
+    },
+    "host_permissions": [
+        "https://arithmetic.zetamac.com/*",
+        "*://*.zetamac.com/*"
+    ]
+}
