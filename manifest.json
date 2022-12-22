@@ -1,7 +1,7 @@
 {
     "name": "Zetaboard",
-    "description": "Zetamac statistics",
-    "version": "1.0",
+    "description": "Collects and displays Zetamac statistics",
+    "version": "0.1",
     "manifest_version": 3,
     "icons": {
         "128": "images/icon.png"
@@ -21,7 +21,6 @@
     },
     "permissions": [
         "webRequest",
-        "tabs",
         "storage"
     ],
     "background": {
